@@ -30,6 +30,11 @@ class LegoThemeFragment : Fragment(), Injectable {
     ): View? {
         viewModel = injectViewModel(viewModelFactory)
 
+        /*
+        * Android data binding generates a Binding class based on this layout. This class holds all the bindings from the layout properties,
+        * i.e., the defined variable to the corresponding views. It also provides generated setters for your data elements from the layout.
+        * The name of the generated class is based on the name of the layout file. This name is converted to Pascal case and the Binding suffix is added to it.
+        * */
         val binding = FragmentThemesBinding.inflate(inflater, container, false)
         context ?: return binding.root
 
